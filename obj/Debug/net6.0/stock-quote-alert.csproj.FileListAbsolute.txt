@@ -1,0 +1,17 @@
+C:\Users\rdapa\Desktop\Programas\INOA-DESAFIO\stock-quote-alert\obj\Debug\net6.0\stock-quote-alert.csproj.AssemblyReference.cache
+C:\Users\rdapa\Desktop\Programas\INOA-DESAFIO\stock-quote-alert\obj\Debug\net6.0\stock-quote-alert.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rdapa\Desktop\Programas\INOA-DESAFIO\stock-quote-alert\obj\Debug\net6.0\stock-quote-alert.AssemblyInfoInputs.cache
+C:\Users\rdapa\Desktop\Programas\INOA-DESAFIO\stock-quote-alert\obj\Debug\net6.0\stock-quote-alert.AssemblyInfo.cs
+C:\Users\rdapa\Desktop\Programas\INOA-DESAFIO\stock-quote-alert\obj\Debug\net6.0\stock-quote-alert.csproj.CoreCompileInputs.cache
+C:\Users\rdapa\Desktop\Programas\INOA-DESAFIO\stock-quote-alert\bin\Debug\net6.0\stock-quote-alert.exe
+C:\Users\rdapa\Desktop\Programas\INOA-DESAFIO\stock-quote-alert\bin\Debug\net6.0\stock-quote-alert.deps.json
+C:\Users\rdapa\Desktop\Programas\INOA-DESAFIO\stock-quote-alert\bin\Debug\net6.0\stock-quote-alert.runtimeconfig.json
+C:\Users\rdapa\Desktop\Programas\INOA-DESAFIO\stock-quote-alert\bin\Debug\net6.0\stock-quote-alert.dll
+C:\Users\rdapa\Desktop\Programas\INOA-DESAFIO\stock-quote-alert\bin\Debug\net6.0\stock-quote-alert.pdb
+C:\Users\rdapa\Desktop\Programas\INOA-DESAFIO\stock-quote-alert\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\rdapa\Desktop\Programas\INOA-DESAFIO\stock-quote-alert\obj\Debug\net6.0\stock-quote-alert.csproj.CopyComplete
+C:\Users\rdapa\Desktop\Programas\INOA-DESAFIO\stock-quote-alert\obj\Debug\net6.0\stock-quote-alert.dll
+C:\Users\rdapa\Desktop\Programas\INOA-DESAFIO\stock-quote-alert\obj\Debug\net6.0\refint\stock-quote-alert.dll
+C:\Users\rdapa\Desktop\Programas\INOA-DESAFIO\stock-quote-alert\obj\Debug\net6.0\stock-quote-alert.pdb
+C:\Users\rdapa\Desktop\Programas\INOA-DESAFIO\stock-quote-alert\obj\Debug\net6.0\stock-quote-alert.genruntimeconfig.cache
+C:\Users\rdapa\Desktop\Programas\INOA-DESAFIO\stock-quote-alert\obj\Debug\net6.0\ref\stock-quote-alert.dll
