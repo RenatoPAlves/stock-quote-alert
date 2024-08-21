@@ -1,21 +1,28 @@
-﻿using System.Net.Http.Json;
-using APIServices;
+﻿using APIServices;
 using JSONServices;
-using static StockDataRecord;
 
-var APIHandler = new APIHandler();
-
-// using (var response = await client.SendAsync(request))
-// {
-// }
-
-using (var response = await APIHandler.GetStockQuote("PETR4"))
+class Program
 {
-    response.EnsureSuccessStatusCode();
+    static async Task Main(string[] args)
+    {
+        if (args.Length < 3)
+        {
+            Console.WriteLine("Número insuficiente de argumentos.");
+            return;
+        }
 
-    var JsonElement = await JSONConverter.ConvertHttpResponse2JSON(response);
-    var StockDataRecord = new StockDataRecord(JsonElement);
-    Console.WriteLine(StockDataRecord.ToString());
-    var body = await response.Content.ReadAsStringAsync();
-    //Console.WriteLine(body);
+        string symbol = args[0];
+        decimal sell = int.Parse(args[1]);
+        decimal buy = int.Parse(args[2]);
+
+        var APIHandler = new APIHandler();
+        var response = await APIHandler.GetStockQuote(symbol);
+        response.EnsureSuccessStatusCode();
+
+        var JsonElement = await JSONConverter.ConvertHttpResponse2JSON(response);
+        var StockDataRecord = new StockDataRecord(JsonElement);
+        Console.WriteLine(StockDataRecord.ToString());
+        var body = await response.Content.ReadAsStringAsync();
+        //Console.WriteLine(body);
+    }
 }
