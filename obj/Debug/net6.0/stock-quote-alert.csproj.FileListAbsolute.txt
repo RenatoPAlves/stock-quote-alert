@@ -15,3 +15,4 @@ C:\Users\rdapa\Desktop\Programas\INOA-DESAFIO\stock-quote-alert\obj\Debug\net6.0
 C:\Users\rdapa\Desktop\Programas\INOA-DESAFIO\stock-quote-alert\obj\Debug\net6.0\stock-quote-alert.pdb
 C:\Users\rdapa\Desktop\Programas\INOA-DESAFIO\stock-quote-alert\obj\Debug\net6.0\stock-quote-alert.genruntimeconfig.cache
 C:\Users\rdapa\Desktop\Programas\INOA-DESAFIO\stock-quote-alert\obj\Debug\net6.0\ref\stock-quote-alert.dll
+C:\Users\rdapa\Desktop\Programas\INOA-DESAFIO\stock-quote-alert\bin\Debug\net6.0\dotenv.net.dll

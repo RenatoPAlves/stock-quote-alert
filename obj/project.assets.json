@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "dotenv.net/3.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/dotenv.net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/dotenv.net.dll": {}
+        }
+      },
       "Newtonsoft.Json/13.0.3": {
         "type": "package",
         "compile": {
@@ -18,6 +27,21 @@
     }
   },
   "libraries": {
+    "dotenv.net/3.2.0": {
+      "sha512": "shohkuZ2HxhNmLY+jCG5MJreMEtmjbaWyOIoJ920KTDwJHT9JC7WdnmrXCwqJ1JPKo5QY9oDJUEFTlQE8qSZSw==",
+      "type": "package",
+      "path": "dotenv.net/3.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "dotenv.net.3.2.0.nupkg.sha512",
+        "dotenv.net.nuspec",
+        "lib/netstandard1.6/dotenv.net.dll",
+        "lib/netstandard2.0/dotenv.net.dll",
+        "lib/netstandard2.1/dotenv.net.dll"
+      ]
+    },
     "Newtonsoft.Json/13.0.3": {
       "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
       "type": "package",
@@ -51,6 +75,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Dotenv.Net >= 3.2.0",
       "Newtonsoft.Json >= 13.0.3"
     ]
   },
@@ -91,6 +116,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Dotenv.Net": {
+            "target": "Package",
+            "version": "[3.2.0, )"
+          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"

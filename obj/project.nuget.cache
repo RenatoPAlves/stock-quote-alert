@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ptT+2K7tA8Y67/fRokbVRNTBYrkOMStwbTUmIHSNZdHCt482UfzGm/WKJNqnSQ3jV/RKxldgWONIkQFma07xDg==",
+  "dgSpecHash": "LfluCfQviEu6jUEBRdcjyBCU0Jjx3bIM5VXgahp/Bx1LFkYXgyo5TEQNOOxuj0to2zymUSAoEmB6NfLSSIrjWw==",
   "success": true,
   "projectFilePath": "C:\\Users\\rdapa\\Desktop\\Programas\\INOA-DESAFIO\\stock-quote-alert\\stock-quote-alert.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\rdapa\\.nuget\\packages\\dotenv.net\\3.2.0\\dotenv.net.3.2.0.nupkg.sha512",
     "C:\\Users\\rdapa\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
