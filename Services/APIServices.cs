@@ -19,7 +19,6 @@ namespace APIServices
         {
             DotEnv.Load();
             var API_Key = Environment.GetEnvironmentVariable("RapidAPI_Key");
-            Console.WriteLine(API_Key);
             httpRequestMessage = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
