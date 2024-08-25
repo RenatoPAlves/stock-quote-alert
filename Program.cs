@@ -1,5 +1,5 @@
-﻿using APIServices;
-using JSONServices;
+﻿using stock_quote_alert.Services.APIServices;
+using stock_quote_alert.Services.EmailServices;
 
 class Program
 {
@@ -16,13 +16,6 @@ class Program
         decimal buy = int.Parse(args[2]);
 
         var APIHandler = new APIHandler();
-        var response = await APIHandler.GetStockQuote(symbol);
-        response.EnsureSuccessStatusCode();
-
-        var JsonElement = await JSONConverter.ConvertHttpResponse2JSON(response);
-        var StockDataRecord = new StockDataRecord(JsonElement);
-        Console.WriteLine(StockDataRecord.ToString());
-        var body = await response.Content.ReadAsStringAsync();
-        //Console.WriteLine(body);
+        await APIHandler.Subscribe2Stock(symbol, sell, buy);
     }
 }
