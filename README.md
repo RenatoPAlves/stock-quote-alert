@@ -41,3 +41,7 @@ Exemplo : `bash dotnet run -- "PETR4"  38.67 36.59`
 
 Basicamente, a aplicação guarda a lista de usuários inscritos para receber notificações.
 Roda o método APIHandler.**Subscribe2Stock**(symbol,sell,buy), o qual por sua vez ao verificar o atendimento de uma das condições monitoradas, chama o método **NotifySubscribers**(stockDataRecord,monitoredValue,events) o qual enviará uma mensagem por email de acordo com a condição verificada.
+
+
+![image](https://github.com/user-attachments/assets/7b665e1f-4baa-4378-bbed-8c453e4e19f4)
+
