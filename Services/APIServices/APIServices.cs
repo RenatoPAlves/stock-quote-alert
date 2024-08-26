@@ -56,9 +56,9 @@ namespace stock_quote_alert.Services.APIServices
                 StockDataRecord.UpdateStockDataRecord(JsonElement);
                 Console.WriteLine(StockDataRecord.ToString());
 
-                if (StockDataRecord.Price >= sell)
+                if (StockDataRecord.Price > sell)
                     EmailHandler.NotifySubscribers(StockDataRecord, sell, Events.TAKE_PROFIT);
-                if (StockDataRecord.Price <= buy)
+                if (StockDataRecord.Price < buy)
                     EmailHandler.NotifySubscribers(StockDataRecord, buy, Events.BUY_THE_DIP);
 
                 await Task.Delay(timeout * 30 * 1000);
