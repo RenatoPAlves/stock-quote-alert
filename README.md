@@ -10,11 +10,11 @@ O Projeto se propõe a monitora valores de ações da B3, e enviar uma mensagem 
 
 ## Compilação
 
-`bash dotnet build`
+` dotnet build`
 
 Caso deseje rodar com a extensão .exe basta: 
 
-`bash dotnet publish -c Release -r win-x64 --self-contained -p:PublishSingleFile=true -o ./release`
+` dotnet publish -c Release -r win-x64 --self-contained -p:PublishSingleFile=true -o ./release`
 
 Substituindo "win-x64" pela distribuição presente na máquina.
 
@@ -23,9 +23,9 @@ Basta adicionar o nome e o email do inscrito no arquivo .env para que seja envia
 
 SubscribersMail=[{"email":"inscrito@email.com","name":"João Silva"}]
 
-`bash dotnet run -- [StockName] [SellMonitorPrice] [BuyMonitorPrice]`
+` dotnet run -- [StockName] [SellMonitorPrice] [BuyMonitorPrice]`
 
-Exemplo : `bash dotnet run -- "PETR4"  38.67 36.59`
+Exemplo : ` dotnet run -- "PETR4"  38.67 36.59`
 
 ## Classes
 
