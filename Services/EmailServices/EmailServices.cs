@@ -9,19 +9,19 @@ namespace stock_quote_alert.Services.EmailServices
     class EmailHandler
     {
         public readonly string title;
-        private readonly string Mailtrap_Key;
-        private readonly string Mailtrap_username;
-        private readonly string Mailtrap_Host;
-        private readonly int Mailtrap_PORT;
+        private readonly string GMAIL_Key;
+        private readonly string GMAIL_Username;
+        private readonly string GMAIL_Host;
+        private readonly int GMAIL_PORT;
         private readonly List<Subscribers> Subscribers;
 
         public EmailHandler()
         {
             DotEnv.Load();
-            Mailtrap_Key = Environment.GetEnvironmentVariable("Mailtrap_Key") ?? "";
-            Mailtrap_PORT = int.Parse(Environment.GetEnvironmentVariable("Mailtrap_PORT") ?? "-1");
-            Mailtrap_username = Environment.GetEnvironmentVariable("Mailtrap_Username") ?? "";
-            Mailtrap_Host = Environment.GetEnvironmentVariable("Mailtrap_Host") ?? "";
+            GMAIL_Key = Environment.GetEnvironmentVariable("GMAIL_Key") ?? "";
+            GMAIL_PORT = int.Parse(Environment.GetEnvironmentVariable("GMAIL_PORT") ?? "-1");
+            GMAIL_Username = Environment.GetEnvironmentVariable("GMAIL_Username") ?? "";
+            GMAIL_Host = Environment.GetEnvironmentVariable("GMAIL_Host") ?? "";
             var subscribersString = Environment.GetEnvironmentVariable("SubscribersMail") ?? "";
             Subscribers = JSONConverter.ParseSubscribersJSON2Object(subscribersString);
             title = "Stock Alert";
@@ -137,7 +137,7 @@ namespace stock_quote_alert.Services.EmailServices
         )
         {
             var email = new MimeMessage();
-            email.From.Add(new MailboxAddress(title, Mailtrap_username));
+            email.From.Add(new MailboxAddress(title, GMAIL_Username));
             email.To.Add(new MailboxAddress(subscriberName, subscriberEmail));
             email.Subject = messageType;
             email.Body = new TextPart("html") { Text = textBody };
@@ -150,11 +150,11 @@ namespace stock_quote_alert.Services.EmailServices
             {
                 using var smtp = new SmtpClient();
                 smtp.Connect(
-                    Mailtrap_Host,
-                    Mailtrap_PORT,
+                    GMAIL_Host,
+                    GMAIL_PORT,
                     MailKit.Security.SecureSocketOptions.StartTls
                 );
-                smtp.Authenticate(Mailtrap_username, Mailtrap_Key);
+                smtp.Authenticate(GMAIL_Username, GMAIL_Key);
                 smtp.Send(email);
                 Console.WriteLine($"Sent");
                 smtp.Disconnect(true);
