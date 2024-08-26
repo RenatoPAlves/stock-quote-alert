@@ -29,7 +29,7 @@ Exemplo : `bash dotnet run -- "PETR4"  38.67 36.59`
 
 ## Classes
 
-Events Enum : enumera eventos de interesse para o cliente, e torna uma solução escalável, para monitoramento de ativos de forma mais complexa do que uma mera comparação de valores de venda e compra.
+**Events Enum** : enumera eventos de interesse para o cliente, e torna uma solução escalável, para monitoramento de ativos de forma mais complexa do que uma mera comparação de valores de venda e compra.
 
 **StockDataRecord** : armazena dados importantes da Stock num objeto, para facilitar sua manipulação.
 
