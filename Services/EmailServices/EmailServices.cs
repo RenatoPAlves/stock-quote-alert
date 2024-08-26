@@ -23,9 +23,18 @@ namespace stock_quote_alert.Services.EmailServices
             Mailtrap_username = Environment.GetEnvironmentVariable("Mailtrap_Username") ?? "";
             Mailtrap_Host = Environment.GetEnvironmentVariable("Mailtrap_Host") ?? "";
             var subscribersString = Environment.GetEnvironmentVariable("SubscribersMail") ?? "";
-            Subscribers = JSONConverter.ParseSubscribers2Json(subscribersString);
+            Subscribers = JSONConverter.ParseSubscribersJSON2Object(subscribersString);
             title = "Stock Alert";
         }
+
+        /// <summary>
+        /// Build Text to given Stock and Subscriber
+        /// </summary>
+        /// <param name="subscriber"></param>
+        /// <param name="stockDataRecord"></param>
+        /// <param name="monitoredValue"></param>
+        /// <param name="events"></param>
+        /// <returns></returns>
 
         public static string BuildTextBody(
             Subscribers subscriber,
@@ -85,7 +94,12 @@ namespace stock_quote_alert.Services.EmailServices
 
             return textBody;
         }
-
+        /// <summary>
+        /// Notifies Subscribers for given event
+        /// </summary>
+        /// <param name="stockDataRecord"></param>
+        /// <param name="monitoredValue"></param>
+        /// <param name="events"></param>
         public void NotifySubscribers(
             StockDataRecord stockDataRecord,
             decimal monitoredValue,
@@ -107,7 +121,14 @@ namespace stock_quote_alert.Services.EmailServices
                 SendMail(email);
             }
         }
-
+        /// <summary>
+        /// Build Email to be send
+        /// </summary>
+        /// <param name="subscriberEmail"></param>
+        /// <param name="subscriberName"></param>
+        /// <param name="messageType"></param>
+        /// <param name="textBody"></param>
+        /// <returns></returns>
         public MimeMessage BuildEmail(
             string subscriberEmail,
             string subscriberName,

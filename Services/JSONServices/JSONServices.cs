@@ -5,7 +5,7 @@ namespace stock_quote_alert.Services.JSONServices
     class JSONConverter
     {
         /// <summary>
-        ///
+        /// Convert HttpResponde to JSON
         /// </summary>
         /// <param name="response"></param>
         /// <returns></returns>
@@ -15,8 +15,12 @@ namespace stock_quote_alert.Services.JSONServices
             var JsonElement = JsonSerializer.Deserialize<JsonElement>(JsonString);
             return JsonElement;
         }
-
-        public static List<Subscribers> ParseSubscribers2Json(string jsonString)
+        /// <summary>
+        /// Initialize List of Subscribers from Json
+        /// </summary>
+        /// <param name="jsonString"></param>
+        /// <returns></returns>
+        public static List<Subscribers> ParseSubscribersJSON2Object(string jsonString)
         {
             List<Subscribers> subscribersList = new();
             var JsonElement = JsonSerializer.Deserialize<JsonElement>(jsonString);

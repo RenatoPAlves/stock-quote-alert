@@ -20,7 +20,7 @@ namespace stock_quote_alert.Services.APIServices
         }
 
         /// <summary>
-        ///
+        /// Returns Task to get HttpReponseMessage of Stock
         /// </summary>
         /// <param name="symbol"></param>
         /// <param name="market"></param>
@@ -39,7 +39,7 @@ namespace stock_quote_alert.Services.APIServices
         }
 
         /// <summary>
-        ///
+        /// Subscribe to get update of given Stock
         /// </summary>
         /// <param name="symbol"></param>
         /// <param name="sell"></param>

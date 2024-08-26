@@ -29,7 +29,8 @@ class StockDataRecord
     public StockDataRecord() { }
 
     /// <summary>
-    ///
+    /// Update StockDataRecord instead of creating new object
+    /// To improve performance and avoid memory expenses 
     /// </summary>
     /// <param name="jsonElement"></param>
     public void UpdateStockDataRecord(JsonElement jsonElement)
