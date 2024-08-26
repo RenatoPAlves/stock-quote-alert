@@ -1,6 +1,6 @@
 # stock-quote-alert
 
-O Projeto se propõe a monitora valores de ações da B3, e enviar uma mensagem por email quando for verificado o atendimento de uma das condições. Seja a de venda pela ação encontrar-se num momento de alta, ou de compra ao se verificar uma baixa no mercado para tal ação.
+O Projeto se propõe a monitorar valores de ações da B3, e enviar uma mensagem por email quando for verificado o atendimento de uma das condições. Seja a de venda pela ação encontrar-se num momento de alta, ou de compra ao se verificar uma baixa no mercado para tal ação.
 
 ## Índice
 
